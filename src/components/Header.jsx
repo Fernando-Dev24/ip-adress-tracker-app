@@ -36,7 +36,7 @@ export const Header = ({setNewLocation}) => {
          return;
       }
 
-      if(domainRegEx.test(inputState)) {
+      if(domainRegEx.test(inputState.trim().toLowerCase())) {
          fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&domain=${inputState}`)
             .then((response) => response.json())
             .then(({ip, location, isp, as}) => {
@@ -55,7 +55,7 @@ export const Header = ({setNewLocation}) => {
                });
             });
          return;
-      } else if (ipAdressRegEx.test(inputState)) {
+      } else if (ipAdressRegEx.test(inputState.trim().toLowerCase())) {
          fetch(`https://geo.ipify.org/api/v1?apiKey=${apiKey}&ipAddress=${inputState}`)
             .then((response) => response.json())
             .then(({ip, location, isp, as}) => {
