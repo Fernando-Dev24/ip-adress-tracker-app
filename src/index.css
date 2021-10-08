@@ -22,7 +22,7 @@ body {
    height: 50vh;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
    align-items: center;
    padding-top: 2.5rem; /* 40px */
    background: url(./images/pattern-bg.png) no-repeat center;
@@ -68,6 +68,7 @@ body {
    }
 
    .header-container {
+      justify-content: center;
       height: 70vh;
    }
 
